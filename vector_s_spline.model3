@@ -1,0 +1,358 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option name="children" type="Map">
+    <Option name="saga:cliprasterwithpolygon_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="saga:cliprasterwithpolygon"/>
+      <Option name="component_description" type="QString" value="Clip raster with polygon"/>
+      <Option name="component_pos_x" type="double" value="541.0804646251321"/>
+      <Option name="component_pos_y" type="double" value="370.9319957761351"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="saga:cliprasterwithpolygon_1"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" type="QString" value="saga:multilevelbsplineinterpolation_1"/>
+            <Option name="output_name" type="QString" value="TARGET_OUT_GRID"/>
+            <Option name="source" type="int" value="1"/>
+          </Option>
+        </Option>
+        <Option name="POLYGONS" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="extent"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="saga:multilevelbsplineinterpolation_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="saga:multilevelbsplineinterpolation"/>
+      <Option name="component_description" type="QString" value="Multilevel b-spline interpolation"/>
+      <Option name="component_pos_x" type="double" value="253.60000000000005"/>
+      <Option name="component_pos_y" type="double" value="348.8"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="saga:multilevelbsplineinterpolation_1"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="EPSILON" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="double" value="0.0001"/>
+          </Option>
+        </Option>
+        <Option name="FIELD" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="interpolationattribute"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="LEVEL_MAX" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="11"/>
+          </Option>
+        </Option>
+        <Option name="METHOD" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="SHAPES" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="input"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="TARGET_USER_FITS" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="TARGET_USER_SIZE" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="pixelsize"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="extent"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="saga:rastercalculator_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="saga:rastercalculator"/>
+      <Option name="component_description" type="QString" value="Raster calculator"/>
+      <Option name="component_pos_x" type="double" value="772.068848996832"/>
+      <Option name="component_pos_y" type="double" value="475.42703273495243"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="saga:rastercalculator_1"/>
+      <Option name="outputs" type="Map">
+        <Option name="result" type="Map">
+          <Option name="child_id" type="QString" value="saga:rastercalculator_1"/>
+          <Option name="component_description" type="QString" value="result"/>
+          <Option name="component_pos_x" type="double" value="903.0680042238649"/>
+          <Option name="component_pos_y" type="double" value="524.30348468849"/>
+          <Option name="default_value" type="Map">
+            <Option name="class" type="QString" value="QgsProcessingOutputLayerDefinition"/>
+            <Option name="create_options" type="Map">
+              <Option name="fileEncoding" type="QString" value="System"/>
+            </Option>
+            <Option name="sink" type="Map">
+              <Option name="active" type="bool" value="true"/>
+              <Option name="type" type="int" value="1"/>
+              <Option name="val" type="QString" value=""/>
+            </Option>
+          </Option>
+          <Option name="mandatory" type="bool" value="true"/>
+          <Option name="name" type="QString" value="result"/>
+          <Option name="output_name" type="QString" value="RESULT"/>
+        </Option>
+      </Option>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="FORMULA" type="List">
+          <Option type="Map">
+            <Option name="expression" type="QString" value="CASE WHEN  @sshaped ='inc' THEN '((1-lt(a,' || @d || '))*1)+(lt(a,' ||  @c  || ')*0)+((1-lt(a,' ||  @c  || '))*lt(a,' ||  @d  || ')*sin(((a-' ||  @c  || ')/(' ||  @d  || '-' ||  @c  || '))*(3.14/2)))' WHEN @sshaped ='dec' THEN '(lt(a,' ||  @c  || ')*1)+((1-lt(a,' ||  @d  || '))*0)+((1-lt(a,' ||  @c  || '))*lt(a,' ||  @d  || ')*sin(((' ||  @d  || '-a)/(' ||  @d  || '-' ||  @c  || '))*(3.14/2)))' END"/>
+            <Option name="source" type="int" value="3"/>
+          </Option>
+        </Option>
+        <Option name="GRIDS" type="List">
+          <Option type="Map">
+            <Option name="child_id" type="QString" value="saga:rastercalculator_2"/>
+            <Option name="output_name" type="QString" value="RESULT"/>
+            <Option name="source" type="int" value="1"/>
+          </Option>
+        </Option>
+        <Option name="RESAMPLING" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="3"/>
+          </Option>
+        </Option>
+        <Option name="TYPE" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="7"/>
+          </Option>
+        </Option>
+        <Option name="USE_NODATA" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
+          </Option>
+        </Option>
+        <Option name="XGRIDS"/>
+      </Option>
+    </Option>
+    <Option name="saga:rastercalculator_2" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="saga:rastercalculator"/>
+      <Option name="component_description" type="QString" value="Raster calculator"/>
+      <Option name="component_pos_x" type="double" value="697.889757127772"/>
+      <Option name="component_pos_y" type="double" value="243.12270327349512"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="saga:rastercalculator_2"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="FORMULA" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="int(a)"/>
+          </Option>
+        </Option>
+        <Option name="GRIDS" type="List">
+          <Option type="Map">
+            <Option name="child_id" type="QString" value="saga:cliprasterwithpolygon_1"/>
+            <Option name="output_name" type="QString" value="OUTPUT"/>
+            <Option name="source" type="int" value="1"/>
+          </Option>
+        </Option>
+        <Option name="RESAMPLING" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="3"/>
+          </Option>
+        </Option>
+        <Option name="TYPE" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="8"/>
+          </Option>
+        </Option>
+        <Option name="USE_NODATA" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
+          </Option>
+        </Option>
+        <Option name="XGRIDS"/>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="help" type="Map">
+    <Option name="ALG_CREATOR" type="QString" value="Dogus Guler"/>
+    <Option name="ALG_DESC" type="QString" value="This algorithm fuzzificates input data in value range 0 and 1 using &quot;S function&quot;."/>
+    <Option name="ALG_HELP_CREATOR" type="QString" value="Dogus Guler"/>
+    <Option name="ALG_VERSION" type="QString" value="0.0.2"/>
+    <Option name="HELP_URL" type="QString" value=""/>
+    <Option name="SHORT_DESCRIPTION" type="QString" value=""/>
+    <Option name="c" type="QString" value="low range value"/>
+    <Option name="d" type="QString" value="high range value"/>
+    <Option name="extent" type="QString" value="study extent"/>
+    <Option name="input" type="QString" value="point, line or polygon"/>
+    <Option name="saga:rastercalculator_1:result" type="QString" value="Fuzzificated Raster Data"/>
+    <Option name="sshaped" type="QString" value="inc or dec"/>
+  </Option>
+  <Option name="model_group" type="QString" value="Bike"/>
+  <Option name="model_name" type="QString" value="Fuzzification Tool (Spline, Raster, S)"/>
+  <Option name="parameterDefinitions" type="Map">
+    <Option name="c" type="Map">
+      <Option name="data_type" type="int" value="1"/>
+      <Option name="default" type="QString" value="0"/>
+      <Option name="description" type="QString" value="c"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="max" type="double" value="1.7976931348623157e+308"/>
+      <Option name="metadata"/>
+      <Option name="min" type="double" value="-1.7976931348623157e+308"/>
+      <Option name="name" type="QString" value="c"/>
+      <Option name="parameter_type" type="QString" value="number"/>
+    </Option>
+    <Option name="d" type="Map">
+      <Option name="data_type" type="int" value="1"/>
+      <Option name="default" type="QString" value="0"/>
+      <Option name="description" type="QString" value="d"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="max" type="double" value="1.7976931348623157e+308"/>
+      <Option name="metadata"/>
+      <Option name="min" type="double" value="-1.7976931348623157e+308"/>
+      <Option name="name" type="QString" value="d"/>
+      <Option name="parameter_type" type="QString" value="number"/>
+    </Option>
+    <Option name="extent" type="Map">
+      <Option name="data_types" type="List">
+        <Option type="int" value="5"/>
+      </Option>
+      <Option name="default" type="invalid"/>
+      <Option name="description" type="QString" value="extent"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="extent"/>
+      <Option name="parameter_type" type="QString" value="vector"/>
+    </Option>
+    <Option name="input" type="Map">
+      <Option name="data_types" type="List">
+        <Option type="int" value="5"/>
+      </Option>
+      <Option name="default" type="invalid"/>
+      <Option name="description" type="QString" value="input"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="input"/>
+      <Option name="parameter_type" type="QString" value="vector"/>
+    </Option>
+    <Option name="interpolationattribute" type="Map">
+      <Option name="allow_multiple" type="bool" value="false"/>
+      <Option name="data_type" type="int" value="0"/>
+      <Option name="default" type="invalid"/>
+      <Option name="description" type="QString" value="interpolation attribute"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="interpolationattribute"/>
+      <Option name="parameter_type" type="QString" value="field"/>
+      <Option name="parent_layer" type="QString" value="input"/>
+    </Option>
+    <Option name="pixelsize" type="Map">
+      <Option name="data_type" type="int" value="1"/>
+      <Option name="default" type="QString" value="30"/>
+      <Option name="description" type="QString" value="pixel size"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="max" type="double" value="10000"/>
+      <Option name="metadata"/>
+      <Option name="min" type="double" value="0"/>
+      <Option name="name" type="QString" value="pixelsize"/>
+      <Option name="parameter_type" type="QString" value="number"/>
+    </Option>
+    <Option name="saga:rastercalculator_1:result" type="Map">
+      <Option name="create_by_default" type="bool" value="true"/>
+      <Option name="default"/>
+      <Option name="description" type="QString" value="result"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="saga:rastercalculator_1:result"/>
+      <Option name="parameter_type" type="QString" value="rasterDestination"/>
+      <Option name="supports_non_file_outputs" type="bool" value="false"/>
+    </Option>
+    <Option name="sshaped" type="Map">
+      <Option name="default" type="QString" value="inc"/>
+      <Option name="description" type="QString" value="s-shaped"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="multiline" type="bool" value="false"/>
+      <Option name="name" type="QString" value="sshaped"/>
+      <Option name="parameter_type" type="QString" value="string"/>
+    </Option>
+  </Option>
+  <Option name="parameters" type="Map">
+    <Option name="c" type="Map">
+      <Option name="component_description" type="QString" value="c"/>
+      <Option name="component_pos_x" type="double" value="388"/>
+      <Option name="component_pos_y" type="double" value="592"/>
+      <Option name="name" type="QString" value="c"/>
+    </Option>
+    <Option name="d" type="Map">
+      <Option name="component_description" type="QString" value="d"/>
+      <Option name="component_pos_x" type="double" value="524"/>
+      <Option name="component_pos_y" type="double" value="685"/>
+      <Option name="name" type="QString" value="d"/>
+    </Option>
+    <Option name="extent" type="Map">
+      <Option name="component_description" type="QString" value="extent"/>
+      <Option name="component_pos_x" type="double" value="438.789888999336"/>
+      <Option name="component_pos_y" type="double" value="215.14810418737554"/>
+      <Option name="name" type="QString" value="extent"/>
+    </Option>
+    <Option name="input" type="Map">
+      <Option name="component_description" type="QString" value="input"/>
+      <Option name="component_pos_x" type="double" value="168"/>
+      <Option name="component_pos_y" type="double" value="68"/>
+      <Option name="name" type="QString" value="input"/>
+    </Option>
+    <Option name="interpolationattribute" type="Map">
+      <Option name="component_description" type="QString" value="interpolationattribute"/>
+      <Option name="component_pos_x" type="double" value="411.6295490267198"/>
+      <Option name="component_pos_y" type="double" value="113.23866252905066"/>
+      <Option name="name" type="QString" value="interpolationattribute"/>
+    </Option>
+    <Option name="pixelsize" type="Map">
+      <Option name="component_description" type="QString" value="pixelsize"/>
+      <Option name="component_pos_x" type="double" value="123.23550293922112"/>
+      <Option name="component_pos_y" type="double" value="511.5764942484734"/>
+      <Option name="name" type="QString" value="pixelsize"/>
+    </Option>
+    <Option name="sshaped" type="Map">
+      <Option name="component_description" type="QString" value="sshaped"/>
+      <Option name="component_pos_x" type="double" value="788.0680042238648"/>
+      <Option name="component_pos_y" type="double" value="362.0671594508975"/>
+      <Option name="name" type="QString" value="sshaped"/>
+    </Option>
+  </Option>
+</Option>

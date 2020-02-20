@@ -1,0 +1,465 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option name="children" type="Map">
+    <Option name="gdal:proximity_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="gdal:proximity"/>
+      <Option name="component_description" type="QString" value="Proximity (raster distance)"/>
+      <Option name="component_pos_x" type="double" value="159.99999999999997"/>
+      <Option name="component_pos_y" type="double" value="456"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="gdal:proximity_1"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="BAND" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="1"/>
+          </Option>
+        </Option>
+        <Option name="DATA_TYPE" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="5"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" type="QString" value="gdal:warpreproject_1"/>
+            <Option name="output_name" type="QString" value="OUTPUT"/>
+            <Option name="source" type="int" value="1"/>
+          </Option>
+        </Option>
+        <Option name="MAX_DISTANCE" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="invalid"/>
+          </Option>
+        </Option>
+        <Option name="NODATA" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="invalid"/>
+          </Option>
+        </Option>
+        <Option name="OPTIONS" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value=""/>
+          </Option>
+        </Option>
+        <Option name="REPLACE" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="invalid"/>
+          </Option>
+        </Option>
+        <Option name="UNITS" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="VALUES" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value=""/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="gdal:warpreproject_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="gdal:warpreproject"/>
+      <Option name="component_description" type="QString" value="Warp (reproject)"/>
+      <Option name="component_pos_x" type="double" value="146.4"/>
+      <Option name="component_pos_y" type="double" value="276"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="gdal:warpreproject_1"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="DATA_TYPE" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="EXTRA" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value=""/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="input"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="MULTITHREADING" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
+          </Option>
+        </Option>
+        <Option name="NODATA" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="invalid"/>
+          </Option>
+        </Option>
+        <Option name="OPTIONS" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value=""/>
+          </Option>
+        </Option>
+        <Option name="RESAMPLING" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="8"/>
+          </Option>
+        </Option>
+        <Option name="SOURCE_CRS" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QgsCoordinateReferenceSystem">
+              <spatialrefsys>
+                <proj4>+proj=lcc +lat_1=35 +lat_2=65 +lat_0=52 +lon_0=10 +x_0=4000000 +y_0=2800000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+                <srsid>29683</srsid>
+                <srid>5637</srid>
+                <authid>EPSG:5637</authid>
+                <description>TUREF / LCC Europe</description>
+                <projectionacronym>lcc</projectionacronym>
+                <ellipsoidacronym>GRS80</ellipsoidacronym>
+                <geographicflag>false</geographicflag>
+              </spatialrefsys>
+            </Option>
+          </Option>
+        </Option>
+        <Option name="TARGET_CRS" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QgsCoordinateReferenceSystem">
+              <spatialrefsys>
+                <proj4>+proj=lcc +lat_1=35 +lat_2=65 +lat_0=52 +lon_0=10 +x_0=4000000 +y_0=2800000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+                <srsid>29683</srsid>
+                <srid>5637</srid>
+                <authid>EPSG:5637</authid>
+                <description>TUREF / LCC Europe</description>
+                <projectionacronym>lcc</projectionacronym>
+                <ellipsoidacronym>GRS80</ellipsoidacronym>
+                <geographicflag>false</geographicflag>
+              </spatialrefsys>
+            </Option>
+          </Option>
+        </Option>
+        <Option name="TARGET_EXTENT" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="invalid"/>
+          </Option>
+        </Option>
+        <Option name="TARGET_EXTENT_CRS" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="invalid"/>
+          </Option>
+        </Option>
+        <Option name="TARGET_RESOLUTION" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="pixelsize"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="saga:cliprasterwithpolygon_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="saga:cliprasterwithpolygon"/>
+      <Option name="component_description" type="QString" value="Clip raster with polygon"/>
+      <Option name="component_pos_x" type="double" value="393"/>
+      <Option name="component_pos_y" type="double" value="419"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="saga:cliprasterwithpolygon_1"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" type="QString" value="gdal:proximity_1"/>
+            <Option name="output_name" type="QString" value="OUTPUT"/>
+            <Option name="source" type="int" value="1"/>
+          </Option>
+        </Option>
+        <Option name="POLYGONS" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="extent"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="saga:rastercalculator_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="saga:rastercalculator"/>
+      <Option name="component_description" type="QString" value="Raster calculator"/>
+      <Option name="component_pos_x" type="double" value="655"/>
+      <Option name="component_pos_y" type="double" value="470"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="saga:rastercalculator_1"/>
+      <Option name="outputs" type="Map">
+        <Option name="result" type="Map">
+          <Option name="child_id" type="QString" value="saga:rastercalculator_1"/>
+          <Option name="component_description" type="QString" value="result"/>
+          <Option name="component_pos_x" type="double" value="835.9896457765668"/>
+          <Option name="component_pos_y" type="double" value="565.6942779291553"/>
+          <Option name="default_value" type="invalid"/>
+          <Option name="mandatory" type="bool" value="false"/>
+          <Option name="name" type="QString" value="result"/>
+          <Option name="output_name" type="QString" value="RESULT"/>
+        </Option>
+      </Option>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="FORMULA" type="List">
+          <Option type="Map">
+            <Option name="expression" type="QString" value="'(lt(a,' ||  @a  || ')*0)+((1-gt(a,' ||  @b  || '))*(1-lt(a,' || @a || '))*((a-' ||  @a  || ')/(' ||  @b  || '-' ||  @a ||  ')))+((lt(a,' ||  @c ||  '))*(gt(a,' ||  @b  || '))*1)+((1-lt(a,' ||  @c  || '))*(1-gt(a,' ||  @d  || '))*((' ||  @d  || '-a)/(' ||  @d  || '-' ||  @c  || ')))+((gt(a,' ||  @d  || '))*0)'"/>
+            <Option name="source" type="int" value="3"/>
+          </Option>
+        </Option>
+        <Option name="GRIDS" type="List">
+          <Option type="Map">
+            <Option name="child_id" type="QString" value="saga:rastercalculator_2"/>
+            <Option name="output_name" type="QString" value="RESULT"/>
+            <Option name="source" type="int" value="1"/>
+          </Option>
+        </Option>
+        <Option name="RESAMPLING" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="3"/>
+          </Option>
+        </Option>
+        <Option name="TYPE" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="7"/>
+          </Option>
+        </Option>
+        <Option name="USE_NODATA" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
+          </Option>
+        </Option>
+        <Option name="XGRIDS"/>
+      </Option>
+    </Option>
+    <Option name="saga:rastercalculator_2" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="saga:rastercalculator"/>
+      <Option name="component_description" type="QString" value="Raster calculator"/>
+      <Option name="component_pos_x" type="double" value="525"/>
+      <Option name="component_pos_y" type="double" value="316"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="saga:rastercalculator_2"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="FORMULA" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="int(a)"/>
+          </Option>
+        </Option>
+        <Option name="GRIDS" type="List">
+          <Option type="Map">
+            <Option name="child_id" type="QString" value="saga:cliprasterwithpolygon_1"/>
+            <Option name="output_name" type="QString" value="OUTPUT"/>
+            <Option name="source" type="int" value="1"/>
+          </Option>
+        </Option>
+        <Option name="RESAMPLING" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="3"/>
+          </Option>
+        </Option>
+        <Option name="TYPE" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="8"/>
+          </Option>
+        </Option>
+        <Option name="USE_NODATA" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
+          </Option>
+        </Option>
+        <Option name="XGRIDS"/>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="help" type="Map">
+    <Option name="" type="QString" value=""/>
+    <Option name="ALG_CREATOR" type="QString" value="Dogus Guler"/>
+    <Option name="ALG_DESC" type="QString" value="This algorithm fuzzificates input parameters in value range 0 and 1 using linear function."/>
+    <Option name="ALG_HELP_CREATOR" type="QString" value="Dogus Guler"/>
+    <Option name="ALG_VERSION" type="QString" value="0.0.2"/>
+    <Option name="HELP_URL" type="QString" value=""/>
+    <Option name="SHORT_DESCRIPTION" type="QString" value=""/>
+    <Option name="c" type="QString" value=""/>
+    <Option name="d" type="QString" value=""/>
+    <Option name="extent" type="QString" value="study extent"/>
+    <Option name="input" type="QString" value="point, line or polygon"/>
+    <Option name="pixelsize" type="QString" value=""/>
+    <Option name="saga:rastercalculator_1:result" type="QString" value=""/>
+    <Option name="sshaped" type="QString" value="inc or dec"/>
+  </Option>
+  <Option name="model_group" type="QString" value="Bike"/>
+  <Option name="model_name" type="QString" value="Fuzzification Tool (Raster, Linear, Pixel)"/>
+  <Option name="parameterDefinitions" type="Map">
+    <Option name="a" type="Map">
+      <Option name="data_type" type="int" value="1"/>
+      <Option name="default" type="QString" value="0"/>
+      <Option name="description" type="QString" value="a"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="max" type="double" value="1.7976931348623157e+308"/>
+      <Option name="metadata"/>
+      <Option name="min" type="double" value="0"/>
+      <Option name="name" type="QString" value="a"/>
+      <Option name="parameter_type" type="QString" value="number"/>
+    </Option>
+    <Option name="b" type="Map">
+      <Option name="data_type" type="int" value="1"/>
+      <Option name="default" type="QString" value="0"/>
+      <Option name="description" type="QString" value="b"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="max" type="double" value="1.7976931348623157e+308"/>
+      <Option name="metadata"/>
+      <Option name="min" type="double" value="0"/>
+      <Option name="name" type="QString" value="b"/>
+      <Option name="parameter_type" type="QString" value="number"/>
+    </Option>
+    <Option name="c" type="Map">
+      <Option name="data_type" type="int" value="1"/>
+      <Option name="default" type="QString" value="0"/>
+      <Option name="description" type="QString" value="c"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="max" type="double" value="1.7976931348623157e+308"/>
+      <Option name="metadata"/>
+      <Option name="min" type="double" value="0"/>
+      <Option name="name" type="QString" value="c"/>
+      <Option name="parameter_type" type="QString" value="number"/>
+    </Option>
+    <Option name="d" type="Map">
+      <Option name="data_type" type="int" value="1"/>
+      <Option name="default" type="QString" value="0"/>
+      <Option name="description" type="QString" value="d"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="max" type="double" value="1.7976931348623157e+308"/>
+      <Option name="metadata"/>
+      <Option name="min" type="double" value="0"/>
+      <Option name="name" type="QString" value="d"/>
+      <Option name="parameter_type" type="QString" value="number"/>
+    </Option>
+    <Option name="extent" type="Map">
+      <Option name="data_types" type="List">
+        <Option type="int" value="5"/>
+      </Option>
+      <Option name="default" type="invalid"/>
+      <Option name="description" type="QString" value="extent"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="extent"/>
+      <Option name="parameter_type" type="QString" value="vector"/>
+    </Option>
+    <Option name="input" type="Map">
+      <Option name="default" type="invalid"/>
+      <Option name="description" type="QString" value="input"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="input"/>
+      <Option name="parameter_type" type="QString" value="raster"/>
+    </Option>
+    <Option name="pixelsize" type="Map">
+      <Option name="data_type" type="int" value="1"/>
+      <Option name="default" type="QString" value="0"/>
+      <Option name="description" type="QString" value="pixel size"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="max" type="double" value="1.7976931348623157e+308"/>
+      <Option name="metadata"/>
+      <Option name="min" type="double" value="-1.7976931348623157e+308"/>
+      <Option name="name" type="QString" value="pixelsize"/>
+      <Option name="parameter_type" type="QString" value="number"/>
+    </Option>
+    <Option name="saga:rastercalculator_1:result" type="Map">
+      <Option name="create_by_default" type="bool" value="true"/>
+      <Option name="default" type="invalid"/>
+      <Option name="description" type="QString" value="result"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="saga:rastercalculator_1:result"/>
+      <Option name="parameter_type" type="QString" value="rasterDestination"/>
+      <Option name="supports_non_file_outputs" type="bool" value="false"/>
+    </Option>
+  </Option>
+  <Option name="parameters" type="Map">
+    <Option name="a" type="Map">
+      <Option name="component_description" type="QString" value="a"/>
+      <Option name="component_pos_x" type="double" value="128"/>
+      <Option name="component_pos_y" type="double" value="629"/>
+      <Option name="name" type="QString" value="a"/>
+    </Option>
+    <Option name="b" type="Map">
+      <Option name="component_description" type="QString" value="b"/>
+      <Option name="component_pos_x" type="double" value="128"/>
+      <Option name="component_pos_y" type="double" value="760"/>
+      <Option name="name" type="QString" value="b"/>
+    </Option>
+    <Option name="c" type="Map">
+      <Option name="component_description" type="QString" value="c"/>
+      <Option name="component_pos_x" type="double" value="460"/>
+      <Option name="component_pos_y" type="double" value="595"/>
+      <Option name="name" type="QString" value="c"/>
+    </Option>
+    <Option name="d" type="Map">
+      <Option name="component_description" type="QString" value="d"/>
+      <Option name="component_pos_x" type="double" value="585"/>
+      <Option name="component_pos_y" type="double" value="674"/>
+      <Option name="name" type="QString" value="d"/>
+    </Option>
+    <Option name="extent" type="Map">
+      <Option name="component_description" type="QString" value="extent"/>
+      <Option name="component_pos_x" type="double" value="357.20000000000005"/>
+      <Option name="component_pos_y" type="double" value="198.39999999999998"/>
+      <Option name="name" type="QString" value="extent"/>
+    </Option>
+    <Option name="input" type="Map">
+      <Option name="component_description" type="QString" value="input"/>
+      <Option name="component_pos_x" type="double" value="102.99999999999997"/>
+      <Option name="component_pos_y" type="double" value="78.8"/>
+      <Option name="name" type="QString" value="input"/>
+    </Option>
+    <Option name="pixelsize" type="Map">
+      <Option name="component_description" type="QString" value="pixelsize"/>
+      <Option name="component_pos_x" type="double" value="252"/>
+      <Option name="component_pos_y" type="double" value="128.79999999999998"/>
+      <Option name="name" type="QString" value="pixelsize"/>
+    </Option>
+  </Option>
+</Option>
