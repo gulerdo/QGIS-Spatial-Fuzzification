@@ -8,7 +8,9 @@ Linear function;
 <img width="250" alt="linear function" src="https://github.com/gulerdo/spatial-fuzzification/blob/master/images/linear.png">
 
 S-function (increasing);
+
 <img width="250" alt="linear function" src="https://github.com/gulerdo/spatial-fuzzification/blob/master/images/s_inc.png">
 
 S-function (decreasing);
+
 <img width="250" alt="linear function" src="https://github.com/gulerdo/spatial-fuzzification/blob/master/images/s_dec.png">
