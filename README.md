@@ -5,7 +5,7 @@ The models can be integrated to QGIS by adding files into model directory. The d
 
 Linear function;
 
-<img width="180" alt="linear function" src="https://github.com/gulerdo/spatial-fuzzification/blob/master/images/linear.png">
+<img width="185" alt="linear function" src="https://github.com/gulerdo/spatial-fuzzification/blob/master/images/linear.png">
 
 S-function (increasing);
 
